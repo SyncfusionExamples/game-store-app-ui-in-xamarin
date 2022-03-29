@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+    x:Class="GameStoreApp.Views.GamePage"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <!-- Main layout-->
+        <Grid RowDefinitions="280,*,Auto">
+            <!-- Step 1. Main Picture-->
+            <Image Grid.Row="0" Aspect="AspectFill" Source="MainGame.jpeg"/>
+            <!-- Step 2.  Game Overview-->
+            <Frame Grid.Row="1" HasShadow="False" CornerRadius="15" Margin="0,-15,0,0">
+                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Padding="20">
+                    <!--Title, description and favorite button-->
+                    <Label  Grid.Column="0" Grid.Row="1" Text="Horizon: New Dawn" FontAttributes="Bold"/>
+                    <Label  Grid.Column="0" Grid.Row="2" Text="Guerrilla &amp; Playstation" FontAttributes="Bold" TextColor="Silver"/>
+                    <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalOptions="Center" ImageSource="HeartIcon" HeightRequest="50" WidthRequest="50" CornerRadius="25" BackgroundColor="#695dd4"/>
+
+                    <!--Overview & description-->
+                    <Label  Grid.Column="0" Grid.Row="3" Margin="0,30,0,10" Text="Overview" FontSize="16" FontAttributes="Bold"/>
+                    <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" TextColor="Silver" Text="Experiencia Aloy's entire legendary quest to unravel the mysteries of a world ruled by deadly Machines.&#10;&#10;An outcast from her tribe, the young hunter fights to uncover her past, discover her destiny... and stop a catastrophic threat to the future."/>
+
+                     <!--Step 3. Rating and Price-->
+                    <CollectionView  VerticalScrollBarVisibility="Never" Margin="0,15,0,0"
+                                     Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" 
+                                     ItemsSource="{Binding Games}" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate> 
+                                <Grid ColumnDefinitions="Auto,Auto,*" RowDefinitions="Auto, Auto" Margin="0,0,0,20">
+                                    <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="0,0,10,0" BorderColor="Transparent" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="50" HeightRequest="50" HasShadow="False" CornerRadius="8" Padding="0" IsClippedToBounds="True">
+                                       <Image Source="{Binding Picture}" Aspect="AspectFill"/>
+                                    </Frame>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Status}" FontAttributes="Bold" TextColor="Silver"/>
+                                    <!--Rating component--> 
+                                    <rating:SfRating Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" ItemCount="5" Value="{Binding Rating}" ReadOnly="true" ItemSize="15" ItemSpacing="2" HorizontalOptions="End">
+                                         <rating:SfRating.RatingSettings>
+                                            <rating:SfRatingSettings RatedStroke="Transparent" RatedFill="#242077"/>
+                                            </rating:SfRating.RatingSettings>
+                                    </rating:SfRating>
+
+                                </Grid>  
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    </CollectionView> 
+                </Grid>
+            </Frame>
+
+            <!-- Price-->
+            <Frame Grid.Row="2" BackgroundColor="#f2f1f8" CornerRadius="35" VerticalOptions="End" HasShadow="False" HeightRequest="80" Margin="0,-10,0,0">
+                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,Auto" Padding="10,5">
+                    <Label Grid.Column="0" Grid.Row="1">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Price: " FontAttributes="Bold"/>
+                                <Span Text="30.00" TextColor="#9099aa" TextDecorations="Strikethrough" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Column="0" Grid.Row="2" Text="$20.00" FontSize="20" TextColor="#695cd4" FontAttributes="Bold"/>
+                    <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="#695cd4" Margin="0,10" TextColor="White" Text="Add to Cart" CornerRadius="10" WidthRequest="180"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

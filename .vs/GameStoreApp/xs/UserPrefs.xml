@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{9D32EA40-FA5D-402A-B02A-CCF1EDE6FC2B}|Default">
+  <MonoDevelop.Ide.ItemProperties.GameStoreApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.0C93035C-3A72-47E3-90FE-691A13B3074B" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameStoreApp/Views/GamePage.xaml">
+    <Files>
+      <File FileName="GameStoreApp/Views/GamePage.xaml" Line="52" Column="153" />
+      <File FileName="GameStoreApp/Views/GamePage.xaml.cs" />
+      <File FileName="GameStoreApp/App.xaml.cs" Line="13" Column="42" />
+      <File FileName="GameStoreApp/Models/Games.cs" />
+      <File FileName="GameStoreApp.iOS/AppDelegate.cs" />
+      <File FileName="GameStoreApp/Views/FavoritePage.xaml" Line="28" Column="12" />
+      <File FileName="GameStoreApp/Views/FavoritePage.xaml.cs" />
+      <File FileName="GameStoreApp/Models/Favorites.cs" />
+      <File FileName="GameStoreApp/ViewModels/GameViewModel.cs" />
+      <File FileName="GameStoreApp/MainPage.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameStoreApp" expanded="True" selected="True">
+            <Node name="GameStoreApp" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="FavoritePage.xaml" expanded="True" />
+                <Node name="GamePage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="GameStoreApp.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="GameStoreApp.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.GameStoreApp.Android PreferredExecutionTarget="Android.lrr_-_pixel_2" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
