@@ -11,3 +11,6 @@ This repository has the Xamarin UI project that replicate a Game Store UI app.
 * Open the solution file using the Visual Studio 2019.
 * Restore the NuGet packages by rebuilding the solution.
 * Run the project.
+
+## Blog reference
+[Replicating a Game Store UI in Xamarin.Forms](https://www.syncfusion.com/blogs/post/replicating-a-game-store-ui-in-xamarin-forms.aspx)
